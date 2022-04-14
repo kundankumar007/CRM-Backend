@@ -47,20 +47,19 @@ const userSchema = new mongoose.Schema({
         type : Date,
         default: ()=>{
             return Date.now();
-        },
+        }
     },
     userType:{
         type : String,
         required:true,
-        default : "CUSTOMER",
+        default : "CUSTOMER"
     },
     userStatus:{
         type : String,
         required:true,
-        default : "APPROVED",
-    },
+        default : "APPROVED"
+    }
 
 
 })
-
 module.exports = mongoose.model("user",userSchema);
